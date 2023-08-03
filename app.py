@@ -41,11 +41,11 @@ def predict_win():
     #-----------------------button style and show message when some one select click on the button-------------------------------------
     def cook_breakfast():
         msg = st.info('Gathering ingredients...')
-        time.sleep(2)
+        time.sleep(1)
         msg.empty()
 
         st.warning('This app only shows the probability based on the current situation. It is not a real prediction.')
-        time.sleep(3)
+        time.sleep(1)
 
         st.info('Predictions are for entertainment purposes only. Enjoy your virtual match! 🏏')
 
@@ -53,10 +53,10 @@ def predict_win():
     pipe = pickle.load(open('pipe (1).pkl','rb'))
     col0,col10=st.columns(2)
     with col0:
-        st.write('# IPL Win Predictor by 👉🏻')
+        st.write('# IPL Win Predictor')
         st.markdown('<span style="color:orange">you can reach me at ***rohitverma0021@gmail.com*** If you know more about this project to go on the Project_info page.</span>', unsafe_allow_html=True)
     with col10:
-        st.image("img.png")
+        st.image("img.png",caption="This is my Startup name")
 
     col1,col2=st.columns(2)
     with col1:
@@ -73,8 +73,10 @@ def predict_win():
         overs=st.number_input("Overs Completed")
     with col5:
         wickets=st.number_input("Wicket Out")
+
     if st.button("Predict Probability"):
-        st.balloons()
+
+        #st.balloons()
         cook_breakfast()
         runs_left=target-score
         balls_left=120 - (overs*6)
@@ -89,11 +91,13 @@ def predict_win():
         win = result[0][1]
         st.header(batting_team + "- " + str(round(win*100)) + "%")
         st.header(bolling_team + "- " + str(round(loss*100)) + "%")
+    st.markdown(
+        "#### Hello, My name is ***[Rohit Verma](https://www.linkedin.com/in/rohit-verma-3094b8224/)***, and I am a Data Science and Analytics professional with a strong academic background and a passion for data-driven decision-making.")
 
 
 def info():
     st.title("IPL Win Predictor - Project Overview")
-    st.markdown('<p style="color: #FFA500; font-size: 24px;"><b>Hello, recruiters! My name is Rohit Verma, and I am a Data Science and Analytics professional with a strong academic background and a passion for data-driven decision-making.</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="color: #FFA500; font-size: 24px;"><b>Hello, My name is Rohit Verma, and I am a Data Science and Analytics professional with a strong academic background and a passion for data-driven decision-making.</b></p>', unsafe_allow_html=True)
     st.markdown("<h3 style='color: red;'>Project Overview</h3>", unsafe_allow_html=True)
     st.write(
         "<span style='color: orange;'>This IPL Win Predictor project is a data science and analytics application developed by Rohit Verma. The goal of this project is to predict the probability of a team winning an IPL match based on the current match situation.</span>",
