@@ -40,7 +40,9 @@ The IPL Win Predictor project provides an engaging and interactive platform for 
 
 - Name: Rohit Verma
 - Location: Indore, India
-- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/rohitverma/)
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/rohit-verma-3094b8224/)
 - Email: rohitvermav0021@gmail.com
 
 Feel free to interact with the web app and explore the exciting world of IPL match predictions!
+# Demo 
+![Click here to intract with the application](https://ipl-win-probability-predictor-niddydata0021.streamlit.app/)
